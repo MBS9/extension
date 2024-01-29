@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.259",
+    "typescript": "^5.0.0"
+  },
+  "name": "extension"
+}
