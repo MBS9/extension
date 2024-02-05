@@ -1,5 +1,5 @@
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.action.setBadgeText({
+chrome.runtime.onInstalled.addListener(async () => {
+  await chrome.action.setBadgeText({
     text: "OFF",
   });
 });
