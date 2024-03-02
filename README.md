@@ -9,4 +9,4 @@ npm install
 npm run dev
 ```
 
-After this, open chrome, and load the unpacked extension from the `package/` folder.
+After this, open Chrome, and load the unpacked extension from the `package/` folder.
