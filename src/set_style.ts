@@ -1,5 +1,3 @@
-console.log("set_style.js is loaded!");
-
 const flatDom = [...document.querySelectorAll("*")] as HTMLElement[];
 
 for (const node of flatDom) {
@@ -37,11 +35,18 @@ for (const node of flatDom) {
   node.style.borderRightColor = "black";
   node.style.borderBottomColor = "black";
   node.style.borderLeftColor = "black";
+  node.style.fontFamily = "Times New Roman";
 
-  if (node.tagName === "a") {
+  // For bullet points use arrow
+  console.log(chrome.runtime.getURL("arrow.svg"));
+  if (node instanceof HTMLUListElement || node instanceof HTMLOListElement) {
+    node.style.listStyleImage = `url(${chrome.runtime.getURL("arrow.svg")})`;
+  }
+
+  if (node instanceof HTMLLinkElement) {
     node.style.color = "blue";
   }
-  if (node.tagName === "button") {
+  if (node instanceof HTMLButtonElement) {
     node.style.color = "blue";
   }
 

@@ -22,5 +22,12 @@
   "background": {
     "service_worker": "background.bundle.js"
   },
-  "host_permissions": ["*://*/*"]
+  "host_permissions": ["*://*/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["arrow.svg"],
+      "extension_ids": ["*"],
+      "matches": ["*://*/*"]
+    }
+  ]
 }
