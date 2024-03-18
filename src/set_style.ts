@@ -38,7 +38,6 @@ for (const node of flatDom) {
   node.style.fontFamily = "Times New Roman";
 
   // For bullet points use arrow
-  console.log(chrome.runtime.getURL("arrow.svg"));
   if (node instanceof HTMLUListElement || node instanceof HTMLOListElement) {
     node.style.listStyleImage = `url(${chrome.runtime.getURL("arrow.svg")})`;
   }
