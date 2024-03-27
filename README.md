@@ -1,4 +1,4 @@
-# Autism Freindly Web
+# Autism Friendly Web
 
 This extension removes unecessary styling that may be disturbing for people with Autism.
 
