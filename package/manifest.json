@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Autism Friendly Web",
-  "description": "Remove disturbing stylesheets",
+  "description": "Remove website styling that may be disturbing to people with autism.",
   "version": "1.0",
   "icons": {
     "16": "images/icon-16.png",
