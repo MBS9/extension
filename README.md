@@ -6,7 +6,7 @@ This extension removes website styling that may be disturbing for people with Au
 > We have completed reaserch to understand the usefulness of this extension. [This can be viewed online](https://1drv.ms/w/s!AoyIAL2psFN2xBGHxgMyj4fklXik?e=9lJqQg).
 
 > [!NOTE]
-> [Download from the chrome webstore](https://chromewebstore.google.com/detail/autism-friendly-web/iifeljmelnjniljopknjfegchiagipag)
+> [Download from the chrome Web Store](https://chromewebstore.google.com/detail/autism-friendly-web/iifeljmelnjniljopknjfegchiagipag)
 
 ## Local development
 
