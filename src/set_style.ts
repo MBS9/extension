@@ -37,6 +37,16 @@ for (const node of flatDom) {
   node.style.borderLeftColor = "black";
   node.style.fontFamily = "Times New Roman";
 
+  if (style.marginTop === "") {
+    node.style.marginTop = "6px";
+  }
+
+  node.style.wordSpacing = "2px";
+
+  if (parseInt(style.fontSize === "" ? "0" : style.fontSize) <= 12) {
+    node.style.fontSize = "15px";
+  }
+
   // For bullet points use arrow
   if (node instanceof HTMLUListElement || node instanceof HTMLOListElement) {
     node.style.listStyleImage = `url(${chrome.runtime.getURL("arrow.svg")})`;
