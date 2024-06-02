@@ -24,3 +24,7 @@ export async function getTab() {
     })
   )[0];
 }
+
+export function getDomain(url: string) {
+  return new URL(url).hostname;
+}

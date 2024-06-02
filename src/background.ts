@@ -1,5 +1,5 @@
 import { DataFormat, Options } from "./types";
-import { start } from "./utils";
+import { start, getDomain } from "./utils";
 
 chrome.runtime.onInstalled.addListener(async () => {
   await chrome.action.setBadgeText({
@@ -13,7 +13,7 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
     console.log(data);
     if (
       data[Options.AUTO_START] === true &&
-      data[Options.EXCEPTIONS].findIndex((v) => v === tab.url) === -1
+      data[Options.EXCEPTIONS].findIndex((v) => v === getDomain(tab.url)) === -1
     ) {
       await start(tab);
     } else {

@@ -1,5 +1,5 @@
 import { DataFormat, Options } from "./types";
-import { start, getTab } from "./utils";
+import { start, getTab, getDomain } from "./utils";
 
 const buttonAuto = document.getElementById("buttonAuto") as HTMLButtonElement;
 const buttonNow = document.getElementById("buttonNow") as HTMLButtonElement;
@@ -13,7 +13,7 @@ buttonHere.addEventListener("click", async () => {
   const data = (await chrome.storage.sync.get()) as DataFormat;
   const tab = await getTab();
   const exceptions: string[] = data[Options.EXCEPTIONS] ?? [];
-  const index = exceptions.indexOf(tab.url);
+  const index = exceptions.indexOf(getDomain(tab.url));
   if (index !== -1) {
     exceptions.splice(index, 1);
     data[Options.EXCEPTIONS] = exceptions;
@@ -42,8 +42,8 @@ buttonNotHere.addEventListener("click", async () => {
   const data = (await chrome.storage.sync.get()) as DataFormat;
   const tab = await getTab();
   const exceptions: string[] = data[Options.EXCEPTIONS] ?? [];
-  if (exceptions.indexOf(tab.url) === -1) {
-    exceptions.push(tab.url);
+  if (exceptions.indexOf(getDomain(tab.url)) === -1) {
+    exceptions.push(getDomain(tab.url));
   }
   data[Options.EXCEPTIONS] = exceptions;
   await chrome.storage.sync.set(data);
