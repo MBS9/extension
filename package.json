@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "build": "npx webpack --config webpack.config.js",
-    "dev": "npx webpack --config webpack.config.js --watch"
+    "build": "npx webpack --config webpack.config.js --mode=production",
+    "dev": "npx webpack --config webpack.config.js --watch --mode=development"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.259",
