@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "build": "npx webpack --config webpack.config.js --mode=production",
+    "dev": "npx webpack --config webpack.config.js --watch --mode=development"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.259",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.0.0",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  },
+  "name": "extension",
+  "private": true
+}

@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: Autism Friendly Web
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Mark
+    family-names: Barsi-Siminszky
+repository-code: 'https://github.com/MBS9/extension'
+url: >-
+  https://chromewebstore.google.com/detail/autism-friendly-web/iifeljmelnjniljopknjfegchiagipag
+license: Apache-2.0

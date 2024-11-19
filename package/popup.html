@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Autism Friendly Web">
+    <title>Autism Friendly Web</title>
+    <style>
+      body {
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        padding: 10;
+        background-color: #f0f0f0;
+        width: 20rem;
+        border-radius: 0.375rem;
+        font-size: 16px;
+      }
+      button {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+        padding: 10px 2px;
+        background-color: rgb(219 234 254);
+        border-color: rgb(219 234 254);
+        border-radius: 0.375rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Autism Friendly Web</h1>
+    <h2>Some configuration options</h2>
+    <button id="buttonAuto">Start Automatically</button>
+    <button id="buttonStop">Don't Start Automatically</button>
+    <button id="buttonNotHere">Exclude this site</button>
+    <button id="buttonHere">Remove this site from exclusion list</button>
+    <button id="buttonNow">Start Now</button>
+    <form id="options">
+      <ol>
+        <li>Change colors? <input type="checkbox" name="colors" id="colors"/></li>
+        <li>Change fonts? <input type="checkbox" name="fonts" id="fonts"/></li>
+        <li>Change sizes? <input type="checkbox" name="sizes" id="sizes"/></li>
+        <li>Change spacing? <input type="checkbox" name="spacing" id="spacing"/></li>
+        <li>Stop autoplay & animations? <input type="checkbox" name="autoplay" id="autoplay"/></li>
+      </ol>
+      <input type="submit"/>
+    </form>
+    <script src="popup.bundle.js"></script>
+  </body>
+</html>
