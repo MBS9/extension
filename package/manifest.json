@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Autism Friendly Web",
+  "name": "Page cleaner for ASD",
   "description": "Remove website styling that may be disturbing for people with autism.",
   "version": "2.1",
   "icons": {
