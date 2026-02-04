@@ -1,9 +1,17 @@
 import { DataFormat } from "./types";
 import { optionsKeys } from "./options";
 
+export const defaultOptions = {
+  fonts: true,
+  colors: true,
+  spacing: true,
+  sizes: true,
+  autoplay: true,
+}
+
 export async function start(tab: chrome.tabs.Tab) {
   const data = (await chrome.storage.sync.get()) as DataFormat;
-  const options = data["options"] ?? {};
+  const options = data["options"] ?? defaultOptions;
   const files = [];
   for (const key of optionsKeys) {
     if (options[key] || options[key] === undefined) {

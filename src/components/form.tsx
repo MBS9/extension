@@ -1,6 +1,6 @@
 import React from 'react';
 import { DataFormat } from "../types";
-import { start, getTab, getDomain } from "../utils";
+import { start, getTab, getDomain, defaultOptions } from "../utils";
 import { Checkbox, Grid, Typography, Box, Button } from '@mui/joy';
 import { useForm, Controller } from 'react-hook-form';
 
@@ -10,13 +10,7 @@ export default function FormUI() {
         defaultValues: {
             autoStart: false,
             exceptions: [],
-            options: {
-                fonts: true,
-                colors: true,
-                spacing: true,
-                sizes: true,
-                autoplay: true,
-            },
+            options: defaultOptions,
         },
     });
     subscribe({
@@ -35,15 +29,7 @@ export default function FormUI() {
             setDomain(getDomain(tab.url));
         });
     }, []);
-    chrome.storage.sync.get().then((data) => {
-        const options = data["options"] as DataFormat["options"];
-        if (options) {
-            for (const [key, value] of Object.entries(options)) {
-                const element = document.getElementById(key) as HTMLInputElement;
-                element.checked = value;
-            }
-        }
-    });
+
     const removeExclusion = async () => {
         const exceptions = getValues("exceptions");
         const index = exceptions.indexOf(domain);
@@ -59,7 +45,6 @@ export default function FormUI() {
     const addExclusion = async () => {
         const exceptions = getValues("exceptions");
         if (!exceptions.includes(domain)) {
-            exceptions.push(domain);
             const new_exceptions = [...exceptions, domain];
             setValue("exceptions", new_exceptions, {
                 shouldTouch: true,
