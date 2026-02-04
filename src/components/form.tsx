@@ -23,7 +23,8 @@ export default function FormUI() {
     });
     React.useEffect(() => {
         chrome.storage.sync.get().then((data) => {
-            reset(data as DataFormat);
+            if (Object.keys(data).length !== 0)
+                reset(data as DataFormat);
         });
         getTab().then((tab) => {
             setDomain(getDomain(tab.url));
