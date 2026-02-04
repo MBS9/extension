@@ -11,8 +11,8 @@ for (const node of flatDomFont) {
     node.style.fontSize = "15px";
   }
 
-  // For bullet points use arrow
-  if (node instanceof HTMLUListElement || node instanceof HTMLOListElement) {
-    node.style.listStyleImage = `url(${chrome.runtime.getURL("arrow.svg")})`;
-  }
+  //// For bullet points use arrow
+  //if (node instanceof HTMLUListElement) {
+  //  node.style.listStyleImage = `url(${chrome.runtime.getURL("arrow.svg")})`;
+  //}
 }
