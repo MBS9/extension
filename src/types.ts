@@ -1,13 +1,9 @@
-export enum Options {
-  AUTO_START = "autoStart",
-  ON = "ON",
-  OFF = "OFF",
-  EXCEPTIONS = "exceptions",
-  OPTIONS = "options",
-}
+import { optionsKeys } from './options';
+
+export type OptionKey = 'fonts' | 'colors' | 'spacing' | 'sizes' | 'autoplay';
 
 export type DataFormat = {
-  [Options.AUTO_START]?: boolean;
-  [Options.EXCEPTIONS]?: string[];
-  [Options.OPTIONS]?: { [key: string]: boolean };
+  autoStart?: boolean;
+  exceptions?: string[];
+  options?: Record<OptionKey, boolean>;
 };

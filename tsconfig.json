@@ -4,5 +4,7 @@
         "types": [
             "chrome"
         ],
+        "jsx": "react-jsx",
+        "moduleResolution": "bundler"
     }
 }
